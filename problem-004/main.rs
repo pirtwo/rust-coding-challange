@@ -7,7 +7,7 @@ fn main() {
 }
 
 // return largest palindrome number
-// of two 3-digit number multiplition
+// of two 3-digit number multiplication
 fn palindrome() -> (u32, u32, u32) {
     for i in (100..=999).rev() {
         for j in (100..=999).rev() {
