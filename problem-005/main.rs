@@ -1,6 +1,6 @@
 fn main() {
     let n = 1;
-    let m = 18;
+    let m = 20;
     let res = smallest_divisible(n, m);
     print!(
         "smallest divisible number between {} and {} = {}",
