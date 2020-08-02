@@ -1,2 +1,2 @@
-# rust-coding-challange
-The coding challanges from https://projecteuler.net in rust lang.
+# rust-coding-challenge
+The coding challenges from https://projecteuler.net in rust lang.
