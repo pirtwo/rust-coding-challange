@@ -4,6 +4,7 @@ fn main() {
     print!("10001th prime number is: {} \n", res[10001]);
 }
 
+// returns prime numbers between 2 and n. 
 fn sieve_of_eratosthenes(n: usize) -> Vec<usize> {
     let mut seq: Vec<Number> = Vec::new();
     let mut res: Vec<usize> = Vec::new();
