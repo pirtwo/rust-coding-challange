@@ -26,7 +26,7 @@ fn main() {
     let (adj, gts_prod) = find_greatest_product(&num, 13);
 
     print!(
-        "Greatest product is: {} from substrin: {}",
+        "Greatest product is: {} from substring: {}",
         gts_prod, adj
     );
 }
