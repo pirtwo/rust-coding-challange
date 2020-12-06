@@ -1,19 +1,16 @@
 fn main() {
     let primes = eratosthenes_sieve(2000000);
-
     let sum: u64 = primes.iter().map(|x| x.value).sum();
-
     println!("sum of primes below 2 Milion is = {}", sum);
 }
 
 fn eratosthenes_sieve(up_to: u64) -> Vec<Number> {
     let mut numbers = vec![];
+    let upper_bound = ((up_to - 2) as f64).sqrt().floor() as usize;
 
     for i in 2..=up_to {
         numbers.push(Number::new(i, true));
     }
-
-    let upper_bound = ((up_to - 2) as f64).sqrt().floor() as usize;
 
     for i in 0..=upper_bound {
         if numbers[i].is_prime {
