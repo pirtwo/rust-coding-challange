@@ -1,7 +1,7 @@
 fn main() {
     let primes = eratosthenes_sieve(2000000);
     let sum: u64 = primes.iter().map(|x| x.value).sum();
-    println!("sum of primes below 2 Milion is = {}", sum);
+    println!("sum of primes below 2 million is = {}", sum);
 }
 
 fn eratosthenes_sieve(up_to: u64) -> Vec<Number> {
