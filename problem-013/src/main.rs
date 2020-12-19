@@ -132,7 +132,7 @@ fn extract_numbers(st: &str) -> Vec<Vec<u8>> {
 fn big_sum(a: &Vec<u8>, b: &Vec<u8>) -> Vec<u8> {
     let mut a = a.clone();
     let mut b = b.clone();
-    let mut carry = false;
+    let mut carry = 0;
     let mut sum = vec![];
 
     a.reverse();
@@ -160,20 +160,9 @@ fn big_sum(a: &Vec<u8>, b: &Vec<u8>) -> Vec<u8> {
     b.append(&mut vec![0u8; b_padding]);
 
     a.iter().enumerate().for_each(|(i, x)| {
-        let mut acc = match carry {
-            true => {
-                carry = false;
-                x + b[i] + 1
-            }
-            false => x + b[i],
-        };
-
-        if acc > 9 {
-            carry = true;
-            acc -= 10;
-        }
-
-        sum.push(acc);
+        let acc = x + b[i] + carry;
+        carry = acc / 10;
+        sum.push(acc % 10);
     });
 
     sum.reverse();
