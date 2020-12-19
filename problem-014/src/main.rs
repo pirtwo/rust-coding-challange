@@ -19,6 +19,11 @@ fn main() {
     );
 }
 
+/**
+ * returns collatz sequence starting from number n.
+ * * n -> n/2  (n is even)
+ * * n -> 3n+1 (n is odd)
+*/
 fn collatz_seq(n: u64) -> Vec<u64> {
     let mut seq = vec![];
     let mut curr = n;
@@ -40,8 +45,9 @@ fn collatz_seq(n: u64) -> Vec<u64> {
     seq
 }
 
-// n -> n/2  (n is even)
-// n -> 3n+1 (n is odd)
+/**
+ * returns the length of collatz sequence starting from number n.
+ */
 fn collatz_seq_len(n: u64) -> u64 {
     let mut len = 1;
     let mut curr = n;
